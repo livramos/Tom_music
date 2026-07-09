@@ -1,24 +1,78 @@
-# Tom_music🎵
-Bot do discord  que toca musica via youtube!
-patch 1.0
+# Tom Music
 
-atualmente ele precisa de programas como o ffmeg para reproduzir música utilizando o seu computador como host, todos os settings com o discord devem ser feitos pelo discord dev (se acha facilmente pelo yt :) )
+Bot de música para Discord, focado em simplicidade, agilidade e uma experiência direta para tocar áudio do YouTube no seu servidor.
 
-no repositório você vai encontrar os seguintes arquivos: 
+## Destaques
 
-#.env :
-arquivo feito para que o seu token do discord não fique visivel para os outros que tentarem acessar o seu Tom
+- Reprodução de músicas via URL do YouTube
+- Comandos simples para tocar, pausar, retomar e parar a reprodução
+- Estrutura enxuta, fácil de entender e evoluir
+- Uso de variáveis de ambiente para proteger o token do bot
 
-#main.py:
-onde o código está "rodando"
+## Funcionalidades
 
-#Tom_music.py:
-onde todas as funções estão armazenadas 
+- `&play <url>`: conecta ao canal de voz e toca o áudio do link informado
+- `&pause`: pausa a música atual
+- `&resume`: retoma a reprodução
+- `&stop`: para a música e desconecta o bot
 
-obs!
-a pasta venv é em relação a área de trabalho virtual onde ele está sendo gerado, nem todas as bibliotecas estão no arquivo então talvez seja preciso adicionar eles através do Pip install no terminal da sua ide!!
+## Requisitos
 
-Considerações: 
-o Bot está na sua primeira versão, pretendo colocar outras plataformas para correlacionar com ele e não só o youtube (como soundcloud, deezer e spotify)
-e mais futuramente pretendo implementar botões de reações que seja possível a interação direta do úsuario através deles 
-mas por enquanto é isso, acompanhem para amasi updates!
+Antes de executar o projeto, você vai precisar de:
+
+- Python 3.10 ou superior
+- Um bot criado no Discord Developer Portal
+- `ffmpeg` instalado na máquina
+- Dependências Python do projeto
+
+## Instalação
+
+1. Clone o repositório.
+2. Crie e ative um ambiente virtual, se quiser isolar as dependências.
+3. Instale os pacotes necessários.
+4. Crie um arquivo `.env` na raiz do projeto com o token do bot.
+
+Exemplo de `.env`:
+
+```env
+discord_token=SEU_TOKEN_AQUI
+```
+
+## Execução
+
+O ponto de entrada principal é o arquivo `main.py`.
+
+```bash
+python main.py
+```
+
+## Estrutura do projeto
+
+- `main.py`: inicia a aplicação
+- `tom_music.py`: contém a lógica do bot e os comandos
+- `.env`: armazena o token do Discord de forma segura
+- `venv/`: ambiente virtual local, caso você esteja usando um
+
+## Como usar
+
+Depois de iniciar o bot e adicioná-lo ao seu servidor:
+
+1. Entre em um canal de voz.
+2. Envie `&play <url>` com um link válido do YouTube.
+3. Use `&pause`, `&resume` e `&stop` conforme necessário.
+
+## Evolução do projeto
+
+Este projeto ainda está em evolução e já foi pensado para crescer além do YouTube. Algumas ideias para próximas versões:
+
+- Suporte a mais plataformas de música
+- Botões de interação para facilitar o controle
+- Melhorias de estabilidade e experiência de uso
+
+## Observações
+
+O projeto utiliza `yt-dlp` para extrair o áudio e `ffmpeg` para a reprodução. Se o bot não tocar corretamente, o primeiro ponto a verificar costuma ser a instalação do `ffmpeg` e a configuração do token no `.env`.
+
+## Contribuição
+
+Sugestões, melhorias e novas funções são bem-vindas. O objetivo é transformar o Tom Music em um bot cada vez mais útil, leve e fácil de manter.
