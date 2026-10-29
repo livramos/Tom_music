@@ -1,1 +1,41 @@
-.env 
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.secret
+*.secrets
+*credentials*
+*credential*
+*secret*
+*password*
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+
+# Python and local environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+
+# Logs, temporary files and local downloads
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+.cache/
+downloads/
+tmp/
+temp/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
